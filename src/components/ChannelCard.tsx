@@ -9,14 +9,15 @@ interface ChannelCardProps {
   logo: string;
   category: string;
   provider: string;
+  streamUrl: string;
 }
 
-export const ChannelCard = ({ id, name, logo, category, provider }: ChannelCardProps) => {
+export const ChannelCard = ({ id, name, logo, category, provider, streamUrl }: ChannelCardProps) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
   const handleChannelClick = () => {
-    // Placeholder for channel viewing functionality
-    console.log(`Opening channel: ${name}`);
+    // Open channel stream in new tab
+    window.open(streamUrl, '_blank');
   };
 
   return (

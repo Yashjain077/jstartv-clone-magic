@@ -16,6 +16,7 @@ export const ChannelGrid = ({ channels }: ChannelGridProps) => {
           logo={channel.logo}
           category={channel.category}
           provider={channel.provider}
+          streamUrl={channel.streamUrl}
         />
       ))}
     </div>
